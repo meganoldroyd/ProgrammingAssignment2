@@ -6,13 +6,13 @@
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
     
-      ## set the value of the vector
+      ## set the value of the matrix
     set <- function(y) {
         x <<- y
         inv <<- NULL
     }
     
-      ## get the value of the vector
+      ## get the value of the matrix
     get <- function() x
     
       ## set the value of the inverse
@@ -38,7 +38,7 @@ cacheSolve <- function(x, ...) {
       ## If inverse is already set, use cached data
     if(!is.null(inv)) {
         message("getting cached data")
-        return m
+        return inv
     }
     
       ## Otherwise, need to get the data and solve for the inverse of x
